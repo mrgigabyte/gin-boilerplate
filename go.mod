@@ -1,4 +1,4 @@
-module gin-boilerplate
+module github.com/mrgigabyte/gin-boilerplate
 
 go 1.15
 
