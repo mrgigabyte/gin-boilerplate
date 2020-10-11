@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gin-boilerplate/modules/api"
+	"github.com/mrgigabyte/gin-boilerplate/modules/api"
 
 	"github.com/gin-gonic/gin"
 )
