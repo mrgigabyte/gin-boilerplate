@@ -2,6 +2,7 @@ package users
 
 import (
 	"fmt"
+	"net/http"
 
 	"github.com/gin-gonic/gin"
 	"github.com/mrgigabyte/gin-boilerplate/modules/models"
@@ -19,7 +20,14 @@ func (h handler) getUsers(db *gorm.DB) gin.HandlerFunc {
 			c.AbortWithStatus(404)
 			fmt.Println(err)
 		} else {
-			c.JSON(200, userModel)
+			c.HTML(
+				http.StatusOK, // Set the HTTP status to 200 (OK)
+				"index.tmpl",  // The name of the HTML it needs to render
+				gin.H{ // Pass the data as a dictionary
+					"content": userModel,
+				},
+			)
+			// c.JSON(200, userModel)
 		}
 
 		// c.JSON(200, gin.H{

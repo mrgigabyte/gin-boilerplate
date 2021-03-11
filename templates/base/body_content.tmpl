@@ -1,0 +1,23 @@
+{{ define "body_content" }}
+	<h1> User Info </h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ .content.ID }} </td>
+      <td>{{ .content.Name }}</td>
+      <td>{{ .content.Age }}</td>
+    </tr>
+  </tbody>
+</table>
+
+	
+
+{{ end }}

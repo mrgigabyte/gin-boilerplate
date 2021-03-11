@@ -1,0 +1,13 @@
+{{ define "base" }}
+	<!doctype html>
+	<html>
+		<head>
+			{{ template "includes/header" . }}
+		</head>
+		<body class="container">
+			{{ template "includes/nav" . }}
+			{{ template "body_content" . }}
+			{{ template "includes/footer" . }}
+		</body>
+	</html>
+{{ end }}
